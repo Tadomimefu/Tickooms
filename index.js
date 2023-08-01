@@ -41,10 +41,34 @@
 
     Send ./openticketdebug.txt when there are errors!
  */
-
+require('dotenv').config()
 const discord = require("discord.js")
 const fs = require('fs')
 const {GatewayIntentBits,Partials} = discord
+const APPLICATION_ID = process.env.APPLICATION_ID 
+const TOKEN = process.env.TOKEN 
+const PUBLIC_KEY = process.env.PUBLIC_KEY || 'not set'
+const GUILD_ID = process.env.GUILD_ID 
+
+
+const axios = require('axios')
+const express = require('express');
+
+const app = express();
+// app.use(bodyParser.json());
+
+const discord_api = axios.create({
+  baseURL: 'https://discord.com/api/',
+  timeout: 3000,
+  headers: {
+	"Access-Control-Allow-Origin": "*",
+	"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+	"Access-Control-Allow-Headers": "Authorization",
+	"Authorization": `Bot ${TOKEN}`
+  }
+});
+
+const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = require('discord-interactions');
 const client = new discord.Client({
     intents:[
         GatewayIntentBits.DirectMessages,
