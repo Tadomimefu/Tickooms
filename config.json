@@ -1,11 +1,11 @@
 {
     "color":"#ffffff",
-    "serverId":"server id (for slash cmds)",
+    "serverId":"1068550337025277982",
     "token":{
-        "value":"insert your bot token here",
-        "fromENV":false
+        "value":"MTEzNTE5MzI2MDEzMDgzMjQ5NA.GoEyPu.-RqE6INIBjx1LcSoMMol2ck5v0-7KrU_HqeVbo",
+        "fromENV":true
     },
-    "adminRoles":["discord role id"],
+    "adminRoles":["1068845413928550400"],
     "prefix":"!ticket ",
     "languageFile":"english",
 
@@ -16,11 +16,11 @@
     },
 
     "system":{
-        "maxAmountOfTickets":3,
+        "maxAmountOfTickets":5,
         "dmMessages":false,
 
-        "memberRole":"member role (leave empty if you have no member role)",
-        "closeMode":"adminonly OR normal (select one!)",
+        "memberRole":"1068804158284636200",
+        "closeMode":"normal",
 
         "transcripts":"!!!! ALL SETTINGS FOR TRANSCRIPTS ARE LOCATED IN: transcriptconfig.json !!!!",
 
@@ -28,21 +28,21 @@
         "answerInEphemeralOnOpen":true
     },
 
-    "SUPPORT":"Take look at our wiki: https://docs.openticket.dj-dj.be or join our discord server: https://discord.dj-dj.be if you need support!",
+    "SUPPORT":"Chat the moderators, or take a look at the bot's support website. https://docs.openticket.dj-dj.be",
     "options":[
         {
             "id":"general",
-            "name":"Question",
-            "description":"Create this ticket if you have a question.",
+            "name":"Request",
+            "description":"Create this ticket if you have a question, or a support request.",
             "icon":"🎫",
-            "label":"question",
+            "label":"Request",
             "type":"ticket",
 
             "color":"gray",
-            "adminroles":["role id"],
-            "readonlyAdminroles":["role id"],
-            "channelprefix":"question-",
-            "category":"category id (or leave empty)",
+            "adminroles":["1068845413928550400"],
+            "readonlyAdminroles":["1068571782803628132"],
+            "channelprefix":"Ticket-",
+            "category":"",
             "message":"You created a ticket!",
             "enableDmOnOpen":true,
             "ticketmessage":"The staff will help you soon!\n\n*Click on the button below to close the ticket!*",
@@ -62,7 +62,7 @@
             },
 
             "autoclose":{
-                "enable":false,
+                "enable":true,
                 "inactiveHours":24
             },
 
@@ -96,8 +96,8 @@
             "type":"role",
 
             "color":"red",
-            "roles":["discord role id"],
-            "mode":"add&remove|remove|add",
+            "roles":["1068804158284636200"],
+            "mode":"add&remove",
             "enableDmOnOpen":true
             
         }
@@ -108,10 +108,10 @@
             "id":"1",
             "name":"Choose Your Ticket",
             "description":"You can click one of the buttons below!",
-            "dropdown":false,
+            "dropdown":true,
 
-            "enableFooter":false,
-            "footer":"Open Ticket v3.4.1 - I'm a footer!",
+            "enableFooter":true,
+            "footer":"Selfhosted - i52410",
 
             "enableFooterImage":false,
             "footerImage":"https://www.example.com/catmemes/cat.png",
